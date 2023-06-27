@@ -4,6 +4,8 @@ from streamlit_option_menu import option_menu
 
 
 # loading the saved models
+# change the path of the files [diabete_model.sav,heart_disease_model.sav,parkinsons_model.sav] after downloading these files from this repositiory and
+#put it in one folder named model_sav
 
 diabetes_model = pickle.load(open('C:\\Users\\Hp\\Desktop\\model_sav\\diabete_model.sav','rb'))
 
@@ -30,7 +32,7 @@ if (selected == 'Diabetes Prediction'):
     
     # page title
     st.title('Diabetes Prediction using ML')
-    
+    st.write('this app is develop by faiz khan[https://github.com/khanfaizkhan03]')
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
@@ -83,7 +85,7 @@ if (selected == 'Heart Disease Prediction'):
     
     # page title
     st.title('Heart Disease Prediction using ML')
-    
+    st.write('this app is develop by faiz khan[https://github.com/khanfaizkhan03]')
     col1, col2, col3 = st.columns(3)
     
     with col1:
@@ -151,7 +153,7 @@ if (selected == "Parkinsons Prediction"):
     
     # page title
     st.title("Parkinson's Disease Prediction using ML")
-    
+    st.write('this app is develop by faiz khan[https://github.com/khanfaizkhan03]')
     col1, col2, col3, col4, col5 = st.columns(5)  
     
     with col1:
@@ -235,3 +237,6 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+
+#after saving this file in the same folder [model_sav] open the terminal and type cd model_sav 
+#then type streamlit run "your this current file name".py also make sure streamlit is installed
